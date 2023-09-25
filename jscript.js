@@ -3,11 +3,12 @@
 //   pre loader ______________ ___________ _________ _______ _____ ___ __ __ _ _ 
 
 var body = document.getElementById('body');
-var preloader = document.getElementById('preloader');
+var preloader = document.querySelector('.preloader');
 
 function loading() {
 
-    preloader.style.display = 'none';
+    preloader.style.width = '0';
+    preloader.style.opacity = '0';
     body.style.overflow = 'visible'
 
 }
