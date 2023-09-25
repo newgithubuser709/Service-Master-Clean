@@ -200,138 +200,27 @@
          Pre Loader animation Starting
      ___________________________________________________________  */
 
+.preloader-js {
+    width: 0px;
+    transition: width 2s linear 1s;
+}
+
 .preloader {
-    z-index: 9999999999999999999;
+    z-index: 999999999;
     width: 100%;
-    height: 120vh;
-    background-color: black;
+    height: 100vh;
+    background-color: #FFD87B;
     position: fixed;
-    display: grid;
-    grid-row: 1;
-    grid-column: 1;
-    grid-auto-rows: max-content;
-    justify-content: center;
-}
-
-.preloader-outter {
-    width: 110px;
-    height: 110px;
-    margin-top: 210px;
-    animation: load linear infinite 1s;
-    overflow: hidden;
-    background-color: var(--aqua);
-    position: relative;
-}
-
-@keyframes load {
-    0% {
-        padding: 0px;
-    }
-    40% {
-        padding: 7px;
-        background-color: rgb(70, 70, 70);
-    }
-    60% {
-        padding: 7px;
-        background-color: rgb(70, 70, 70);
-    }
-    100% {
-        padding: 0px;
-    }
-}
-
-.preloader-inner {
-    width: 100%;
-    height: 100%;
-    transition: 0.3s;
-    border: 1px solid white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    transition: width 0.1s 1s, opacity 0.5s;
+    overflow: hidden;
 }
 
-.preloader-inner img {
-    width: 40px;
-}
-
-.preloader-inner::after {
-    content: '';
-    position: absolute;
-    background-color: white;
-    height: 2px;
-    width: 0;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 17px;
-    animation: load-ball linear infinite 1s;
-}
-
-@keyframes load-ball {
-    0% {
-        width: 0;
-    }
-    40% {
-        width: 35px;
-    }
-    60% {
-        width: 35px;
-    }
-    100% {
-        width: 0;
-    }
-}
-
-.preloader-text {
-    color: white;
-    padding: 7px 0;
-}
-
-.preloader-text-span1 {
-    animation: load-span1 linear infinite 1s;
-}
-
-.preloader-text-span2 {
-    animation: load-span2 linear infinite 1s;
-}
-
-.preloader-text-span3 {
-    animation: load-span3 linear infinite 1s;
-}
-
-@keyframes load-span1 {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes load-span2 {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes load-span3 {
-    0% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.preloader img {
+    display: block;
+    width: 210px;
 }
 
 
